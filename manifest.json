@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Jira Work Logger",
+  "description": "Automatically fills work log comments based on activity selection",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://example.com/*"
+  ],
+  "action": {
+    "default_icon": {
+      "32": "images/icon32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://example.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
